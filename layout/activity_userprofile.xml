@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserprofileActivity"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:background="#5CC09F">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_profile"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="67dp"
+                    android:layout_marginEnd="151dp"
+                    android:layout_marginBottom="73dp"
+                    android:clickable="true"
+                    android:onClick="ChooseImage"
+                    android:src="@drawable/dp">
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/edges"
+            app:cornerRadius="100dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ic_image"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/profile1"/>
+
+            <EditText
+                android:id="@+id/fullname"
+                android:layout_width="2000dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/ic_image"
+                android:layout_marginStart="50dp"
+                android:hint="Name"
+                android:textSize="18sp" />
+
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ic_email"
+                android:background="@drawable/ic_baseline_message_24"
+                android:layout_below="@+id/fullname"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/email_text"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ic_email"
+                android:layout_alignLeft="@id/ic_email"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="-26dp"
+                android:hint="Emails"
+                android:textSize="18sp" />
+
+
+
+
+            <ImageView
+                android:id="@+id/gender"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/email_text"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/gender" />
+
+            <EditText
+                android:id="@+id/gender_text"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gender"
+                android:layout_alignStart="@id/gender"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="-26dp"
+                android:hint="Gender"
+                android:textSize="18sp" />
+
+
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/dob"
+                android:background="@drawable/ic_baseline_date_range_24"
+                android:layout_below="@+id/gender_text"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/dob_text"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dob"
+                android:layout_alignStart="@id/dob"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="-26dp"
+                android:hint="Date of birth"
+                android:textSize="18sp" />
+
+
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/phone"
+                android:background="@drawable/ic_baseline_phone_android_24"
+                android:layout_below="@+id/dob"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/phone_text"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phone"
+                android:layout_alignStart="@id/phone"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="-26dp"
+                android:hint="Mobile"
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/saveprofile"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phone_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="100dp"
+            android:text="Save Profile"
+            app:cornerRadius="40dp" />
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/black"
+            android:visibility="invisible"
+            android:id="@+id/progress_bar"/>
+    </LinearLayout>
+</ScrollView>
